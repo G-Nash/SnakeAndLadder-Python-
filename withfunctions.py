@@ -1,4 +1,5 @@
 import random
+import time
 
 player1, player2 =0,0
 switchThrow=True
@@ -22,6 +23,8 @@ def gameMove(player, currentRoll):
         player=ladders[player]
         print("player now at ",player)
         print()
+    
+    time.sleep(0.4)
 
     return player
 
@@ -40,7 +43,7 @@ while True:
 
     else:
         player2=gameMove(player2,currentRoll)
-        print("player1's at", player2)
+        print("player2's at", player2)
         print()
 
         if player2==100:
