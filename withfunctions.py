@@ -1,8 +1,7 @@
 import random
 
-player1=0
-player2=0
-switchTurn=True
+player1, player2 =0,0
+switchThrow=True
 snakes={22:2, 33:3, 44:4, 55:5, 66:6, 77:7, 88:8}
 ladders={11:91, 21:92, 31:93, 41:94, 51:95, 61:96, 71:97, 81:98}
 
@@ -29,7 +28,7 @@ def gameMove(player, currentRoll):
 while True:
     currentRoll=die()
 
-    if switchTurn==True:
+    if switchThrow==True:
         player1=gameMove(player1,currentRoll)
         print("player1's at", player1)
         print()
@@ -48,4 +47,4 @@ while True:
             break
         
     if currentRoll != 6:
-        switchTurn = not switchTurn
+        switchThrow = not switchThrow
