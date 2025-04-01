@@ -2,10 +2,10 @@ import random
 
 player1, player2 =0,0
 switchThrow=True
-snakes={22:2, 33:3, 44:4, 55:5, 66:6, 77:7, 88:8}
-ladders={11:91, 21:92, 31:93, 41:94, 51:95, 61:96, 71:97, 81:98}
+snakes={22:2, 33:3, 44:4, 55:5, 66:6, 77:7, 88:8, 99:1}
+ladders={11:51, 21:62, 31:73, 41:84, 51:95, 61:96, 71:97, 81:98}
 
-def die():
+def dice():
     return (random.randint(1,6))
 
 def gameMove(player, currentRoll):
@@ -22,11 +22,12 @@ def gameMove(player, currentRoll):
         player=ladders[player]
         print("player now at ",player)
         print()
+
     return player
 
 
 while True:
-    currentRoll=die()
+    currentRoll=dice()
 
     if switchThrow==True:
         player1=gameMove(player1,currentRoll)
